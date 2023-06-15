@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\diogo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\diogo\\.nuget\\packages"
+      "C:\\Users\\Windows10\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Windows10\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,

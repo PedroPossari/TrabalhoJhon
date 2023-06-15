@@ -1,3 +1,5 @@
+using TrabalhoLipa.Models;
+
 namespace TrabalhoLipa
 {
     internal static class Program
@@ -11,6 +13,7 @@ namespace TrabalhoLipa
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            CRUD.Init_BD();
             Application.Run(new FormLogin());
         }
     }

@@ -8,7 +8,11 @@ namespace TrabalhoLipa.Models
 {
     public static class CRUD
     {
-        private static readonly EFDbContext bd = new EFDbContext();
+        private static EFDbContext bd = null!;
+        public static void Init_BD()
+        {
+           bd = new EFDbContext();
+        }
 
         #region Cliente
 
