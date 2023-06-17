@@ -34,6 +34,13 @@ namespace TrabalhoLipa
                 else
                 {
                     MessageBox.Show("Usuário ou Senha inválidos!");
+                    if(BoxUsuario.Text == "")
+                    {
+                        BoxUsuario.Focus();
+                    } if(BoxSenha.Text == "")
+                    {
+                        BoxSenha.Focus();
+                    }
                 }
             }
             else
