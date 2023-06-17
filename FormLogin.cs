@@ -41,5 +41,12 @@ namespace TrabalhoLipa
                 MessageBox.Show("Usuário ou Senha inválidos!");
             }
         }
+
+        private void Cadastro_Click(object sender, EventArgs e)
+        {
+            Cadastro Cadastro = new Cadastro();
+            Cadastro.Show();
+            this.Hide();
+        }
     }
 }

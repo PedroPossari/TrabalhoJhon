@@ -34,15 +34,17 @@
             LblSenha = new Label();
             LblUsuario = new Label();
             LblLogin = new Label();
+            Cadastro = new Button();
             SuspendLayout();
             // 
             // BtnEntrar
             // 
             BtnEntrar.Anchor = AnchorStyles.None;
             BtnEntrar.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            BtnEntrar.Location = new Point(313, 328);
+            BtnEntrar.Location = new Point(358, 437);
+            BtnEntrar.Margin = new Padding(3, 4, 3, 4);
             BtnEntrar.Name = "BtnEntrar";
-            BtnEntrar.Size = new Size(174, 59);
+            BtnEntrar.Size = new Size(199, 79);
             BtnEntrar.TabIndex = 14;
             BtnEntrar.Text = "Entrar";
             BtnEntrar.UseVisualStyleBackColor = true;
@@ -51,26 +53,28 @@
             // BoxSenha
             // 
             BoxSenha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            BoxSenha.Location = new Point(217, 234);
+            BoxSenha.Location = new Point(248, 312);
+            BoxSenha.Margin = new Padding(3, 4, 3, 4);
             BoxSenha.Name = "BoxSenha";
-            BoxSenha.Size = new Size(367, 23);
+            BoxSenha.Size = new Size(419, 27);
             BoxSenha.TabIndex = 13;
             // 
             // BoxUsuario
             // 
             BoxUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            BoxUsuario.Location = new Point(217, 149);
+            BoxUsuario.Location = new Point(248, 199);
+            BoxUsuario.Margin = new Padding(3, 4, 3, 4);
             BoxUsuario.Name = "BoxUsuario";
-            BoxUsuario.Size = new Size(367, 23);
+            BoxUsuario.Size = new Size(419, 27);
             BoxUsuario.TabIndex = 12;
             // 
             // LblSenha
             // 
             LblSenha.AutoSize = true;
             LblSenha.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            LblSenha.Location = new Point(217, 199);
+            LblSenha.Location = new Point(248, 265);
             LblSenha.Name = "LblSenha";
-            LblSenha.Size = new Size(85, 32);
+            LblSenha.Size = new Size(106, 41);
             LblSenha.TabIndex = 11;
             LblSenha.Text = "Senha:";
             LblSenha.TextAlign = ContentAlignment.MiddleCenter;
@@ -79,9 +83,9 @@
             // 
             LblUsuario.AutoSize = true;
             LblUsuario.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            LblUsuario.Location = new Point(217, 114);
+            LblUsuario.Location = new Point(248, 152);
             LblUsuario.Name = "LblUsuario";
-            LblUsuario.Size = new Size(99, 32);
+            LblUsuario.Size = new Size(126, 41);
             LblUsuario.TabIndex = 10;
             LblUsuario.Text = "Usuário:";
             LblUsuario.TextAlign = ContentAlignment.MiddleCenter;
@@ -91,24 +95,39 @@
             LblLogin.Anchor = AnchorStyles.Top;
             LblLogin.AutoSize = true;
             LblLogin.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            LblLogin.Location = new Point(257, 9);
+            LblLogin.Location = new Point(294, 12);
             LblLogin.Name = "LblLogin";
-            LblLogin.Size = new Size(286, 65);
+            LblLogin.Size = new Size(356, 81);
             LblLogin.TabIndex = 15;
             LblLogin.Text = "Fazer Login";
             LblLogin.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // Cadastro
+            // 
+            Cadastro.Anchor = AnchorStyles.None;
+            Cadastro.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Cadastro.Location = new Point(635, 437);
+            Cadastro.Margin = new Padding(3, 4, 3, 4);
+            Cadastro.Name = "Cadastro";
+            Cadastro.Size = new Size(199, 79);
+            Cadastro.TabIndex = 16;
+            Cadastro.Text = "Cadastro";
+            Cadastro.UseVisualStyleBackColor = true;
+            Cadastro.Click += Cadastro_Click;
+            // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(Cadastro);
             Controls.Add(LblLogin);
             Controls.Add(BtnEntrar);
             Controls.Add(BoxSenha);
             Controls.Add(BoxUsuario);
             Controls.Add(LblSenha);
             Controls.Add(LblUsuario);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormLogin";
             Text = "FormLogin";
             ResumeLayout(false);
@@ -123,5 +142,6 @@
         private Label LblSenha;
         private Label LblUsuario;
         private Label LblLogin;
+        private Button Cadastro;
     }
 }

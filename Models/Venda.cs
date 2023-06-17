@@ -25,9 +25,9 @@ public partial class Venda
 
     public DateTime DataCadastro { get; set; } = DateTime.Now;
 
-    public Cliente Cliente { get; set; } = null!;
+    public Cliente? Cliente { get; set; } 
 
-    public Usuario Usuario { get; set; } = null!;
+    public Usuario? Usuario { get; set; } 
 
     public virtual ICollection<ItemVenda> Itemvenda { get; set; } = new List<ItemVenda>();
 }

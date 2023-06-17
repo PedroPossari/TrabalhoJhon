@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1ppxqyJsk/2mJdUAj9iiLjoLr+mZn/AoA5gGDOT7bYw9IP3LpsVuXpuVt3OOqlHeNEFJlaee+61XTSm+T7fIqw==",
+  "dgSpecHash": "b111A/hE8WAUJ/Od9KshJGf6RWgVV7KM3GEjz9UepHARdKyT/Nksaoa2vRFcl2ZOlrE6rxmfiAdZB39LD8sWYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoLipa\\TrabalhoLipa.csproj",
+  "projectFilePath": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoJhon\\TrabalhoLipa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows10\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Windows10\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.7\\microsoft.entityframeworkcore.7.0.7.nupkg.sha512",

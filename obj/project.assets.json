@@ -992,11 +992,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoLipa\\TrabalhoLipa.csproj",
+      "projectUniqueName": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoJhon\\TrabalhoLipa.csproj",
       "projectName": "TrabalhoLipa",
-      "projectPath": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoLipa\\TrabalhoLipa.csproj",
+      "projectPath": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoJhon\\TrabalhoLipa.csproj",
       "packagesPath": "C:\\Users\\Windows10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoLipa\\obj\\",
+      "outputPath": "C:\\Users\\Windows10\\Documents\\GitHub\\TrabalhoJhon\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Windows10\\AppData\\Roaming\\NuGet\\NuGet.Config",
