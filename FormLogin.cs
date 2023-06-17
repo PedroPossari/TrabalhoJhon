@@ -22,15 +22,15 @@ namespace TrabalhoLipa
         {
             string user = BoxUsuario.Text;
             string pass = BoxSenha.Text;
-            Usuario? login = CRUD.BuscarUsuarioPorUser(user);
-            if (login != null)
+            //Usuario? login = CRUD.BuscarUsuarioPorUser(user);
+            /*if (login != null)
             {
                 if (login.Senha == pass)
-                {
+                {*/
                     FormPrincipal formPrincipal = new FormPrincipal();
                     formPrincipal.Show();
                     this.Hide();
-                }
+                /*}
                 else
                 {
                     MessageBox.Show("Usuário ou Senha inválidos!");
@@ -46,7 +46,7 @@ namespace TrabalhoLipa
             else
             {
                 MessageBox.Show("Usuário ou Senha inválidos!");
-            }
+            }*/
         }
 
         private void Cadastro_Click(object sender, EventArgs e)
