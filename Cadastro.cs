@@ -26,10 +26,12 @@ namespace TrabalhoLipa
                 if (Confirma_Senha.Text == Senha.Text)
                 {
                     user.NomeCompleto = Nome_Completo.Text;
-                    user.User = User.Text; 
+                    user.User = User.Text;
                     user.Senha = Senha.Text;
-                   
-                 CRUD.InserirUsuario(user);
+
+                    CRUD.InserirUsuario(user);
+
+                    MessageBox.Show("Usuario cadastrado com Sucesso!");
 
                     FormLogin formLogin = new FormLogin();
                     formLogin.Show();

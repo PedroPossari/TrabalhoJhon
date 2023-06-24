@@ -16,5 +16,16 @@ namespace TrabalhoLipa
         {
             InitializeComponent();
         }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Registar_Venda venda = new Registar_Venda();
+            venda.Show();
+            this.Hide();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

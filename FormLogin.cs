@@ -27,6 +27,7 @@ namespace TrabalhoLipa
             {
                 if (login.Senha == pass)
                 {
+                    MessageBox.Show("Logado com Sucesso!");
                     FormPrincipal formPrincipal = new FormPrincipal();
                     formPrincipal.Show();
                     this.Hide();

@@ -337,6 +337,12 @@ namespace TrabalhoLipa.Models
             return bd.Produtos.Find(id);
         }
 
+        public static Produto? BuscarProdutoPorNome(string Nome)
+        {
+            return bd.Produtos.FirstOrDefault(u => u.Nome == Nome);
+        }
+
+
         #endregion
 
         #region Excluir
