@@ -16,5 +16,10 @@ namespace TrabalhoLipa
             CRUD.Init_BD();
             Application.Run(new FormLogin());
         }
+        public static void Altura(KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && e.KeyChar != 8) 
+                e.Handled = true;
+        }
     }
 }

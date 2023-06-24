@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            BoxUsuario = new TextBox();
-            textBox1 = new TextBox();
+            BoxNProduto = new TextBox();
+            txtCliente = new TextBox();
             LblLogin = new Label();
             LblUsuario = new Label();
             textDesconto = new Label();
@@ -40,34 +40,35 @@
             Desconto = new TextBox();
             BtnFinalizar = new Button();
             button1 = new Button();
+            Adicionar_Produto = new Button();
             SuspendLayout();
             // 
-            // BoxUsuario
+            // BoxNProduto
             // 
-            BoxUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            BoxUsuario.Location = new Point(26, 284);
-            BoxUsuario.Name = "BoxUsuario";
-            BoxUsuario.Size = new Size(367, 23);
-            BoxUsuario.TabIndex = 13;
+            BoxNProduto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            BoxNProduto.Location = new Point(26, 284);
+            BoxNProduto.Name = "BoxNProduto";
+            BoxNProduto.Size = new Size(367, 23);
+            BoxNProduto.TabIndex = 13;
             // 
-            // textBox1
+            // txtCliente
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(26, 208);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(367, 23);
-            textBox1.TabIndex = 14;
+            txtCliente.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtCliente.Location = new Point(26, 208);
+            txtCliente.Name = "txtCliente";
+            txtCliente.Size = new Size(367, 23);
+            txtCliente.TabIndex = 14;
             // 
             // LblLogin
             // 
             LblLogin.Anchor = AnchorStyles.Top;
             LblLogin.AutoSize = true;
             LblLogin.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            LblLogin.Location = new Point(258, 9);
+            LblLogin.Location = new Point(206, 9);
             LblLogin.Name = "LblLogin";
-            LblLogin.Size = new Size(286, 65);
+            LblLogin.Size = new Size(397, 65);
             LblLogin.TabIndex = 16;
-            LblLogin.Text = "Fazer Login";
+            LblLogin.Text = "Realizar Compra";
             LblLogin.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // LblUsuario
@@ -98,9 +99,9 @@
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(26, 249);
             label2.Name = "label2";
-            label2.Size = new Size(218, 32);
+            label2.Size = new Size(207, 32);
             label2.TabIndex = 19;
-            label2.Text = "Código do Produto";
+            label2.Text = "Nome do Produto";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Qauntidade
@@ -161,11 +162,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // Adicionar_Produto
+            // 
+            Adicionar_Produto.Anchor = AnchorStyles.None;
+            Adicionar_Produto.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Adicionar_Produto.Location = new Point(556, 273);
+            Adicionar_Produto.Name = "Adicionar_Produto";
+            Adicionar_Produto.Size = new Size(152, 50);
+            Adicionar_Produto.TabIndex = 26;
+            Adicionar_Produto.Text = "Adicionar Produto";
+            Adicionar_Produto.UseVisualStyleBackColor = true;
+            // 
             // Registar_Venda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Adicionar_Produto);
             Controls.Add(button1);
             Controls.Add(BtnFinalizar);
             Controls.Add(Desconto);
@@ -176,8 +189,8 @@
             Controls.Add(textDesconto);
             Controls.Add(LblUsuario);
             Controls.Add(LblLogin);
-            Controls.Add(textBox1);
-            Controls.Add(BoxUsuario);
+            Controls.Add(txtCliente);
+            Controls.Add(BoxNProduto);
             Name = "Registar_Venda";
             Text = " ";
             FormClosing += Registar_Venda_FormClosing;
@@ -187,8 +200,8 @@
 
         #endregion
 
-        private TextBox BoxUsuario;
-        private TextBox textBox1;
+        private TextBox BoxNProduto;
+        private TextBox txtCliente;
         private Label LblLogin;
         private Label LblUsuario;
         private Label textDesconto;
@@ -199,5 +212,6 @@
         private TextBox Desconto;
         private Button BtnFinalizar;
         private Button button1;
+        private Button Adicionar_Produto;
     }
 }

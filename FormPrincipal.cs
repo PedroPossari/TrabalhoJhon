@@ -23,9 +23,22 @@ namespace TrabalhoLipa
             this.Hide();
         }
 
+        private void AddProduto_Click(object sender, EventArgs e)
+        {
+            Cadastrar_Produto cadastro = new Cadastrar_Produto();
+            cadastro.Show();
+            this.Hide();
+        }
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void CadCliente_Click(object sender, EventArgs e)
+        {
+            Cadastrar_Cliente cliente = new Cadastrar_Cliente();
+            cliente.Show();
+            this.Hide();
         }
     }
 }
