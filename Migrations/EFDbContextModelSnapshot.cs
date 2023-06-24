@@ -16,7 +16,7 @@ namespace TrabalhoLipa.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.5")
+                .HasAnnotation("ProductVersion", "7.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("TrabalhoLipa.Models.Cliente", b =>
@@ -128,7 +128,7 @@ namespace TrabalhoLipa.Migrations
 
                     b.HasIndex("VendaId");
 
-                    b.ToTable("ItemVenda");
+                    b.ToTable("ItensVendas");
                 });
 
             modelBuilder.Entity("TrabalhoLipa.Models.Produto", b =>
@@ -218,7 +218,7 @@ namespace TrabalhoLipa.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("ClienteId")
+                    b.Property<int?>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DataCadastro")
@@ -247,7 +247,7 @@ namespace TrabalhoLipa.Migrations
                     b.Property<int>("TotalItens")
                         .HasColumnType("int");
 
-                    b.Property<int>("UsuarioId")
+                    b.Property<int?>("UsuarioId")
                         .HasColumnType("int");
 
                     b.Property<double>("ValorTotal")
@@ -259,7 +259,7 @@ namespace TrabalhoLipa.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Venda");
+                    b.ToTable("Vendas");
                 });
 
             modelBuilder.Entity("TrabalhoLipa.Models.ItemVenda", b =>
@@ -281,15 +281,11 @@ namespace TrabalhoLipa.Migrations
                 {
                     b.HasOne("TrabalhoLipa.Models.Cliente", "Cliente")
                         .WithMany("Vendas")
-                        .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClienteId");
 
                     b.HasOne("TrabalhoLipa.Models.Usuario", "Usuario")
                         .WithMany("Venda")
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Cliente");
 
