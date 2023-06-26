@@ -27,26 +27,26 @@ namespace TrabalhoLipa
             {
                 if (login.Senha == pass)
                 {*/
-                    FormPrincipal formPrincipal = new FormPrincipal();
-                    formPrincipal.Show();
-                    this.Hide();
-                /*}
-                else
-                {
-                    MessageBox.Show("Usuário ou Senha inválidos!");
-                    if(BoxUsuario.Text == "")
-                    {
-                        BoxUsuario.Focus();
-                    } if(BoxSenha.Text == "")
-                    {
-                        BoxSenha.Focus();
-                    }
-                }
-            }
+            FormPrincipal formPrincipal = new FormPrincipal(user);
+            formPrincipal.Show();
+            this.Hide();
+            /*}
             else
             {
                 MessageBox.Show("Usuário ou Senha inválidos!");
-            }*/
+                if(BoxUsuario.Text == "")
+                {
+                    BoxUsuario.Focus();
+                } if(BoxSenha.Text == "")
+                {
+                    BoxSenha.Focus();
+                }
+            }
+        }
+        else
+        {
+            MessageBox.Show("Usuário ou Senha inválidos!");
+        }*/
         }
 
         private void Cadastro_Click(object sender, EventArgs e)

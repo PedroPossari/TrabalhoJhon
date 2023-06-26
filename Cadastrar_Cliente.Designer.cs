@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            Condicao = new TextBox();
-            textBox3 = new TextBox();
-            Marca = new TextBox();
+            RG = new TextBox();
+            DataNascimento = new TextBox();
+            CPF = new TextBox();
             label9 = new Label();
             label8 = new Label();
             preco = new Label();
             label5 = new Label();
-            Nome_Produto = new TextBox();
+            NomeCliente = new TextBox();
             mySqlCommand1 = new MySqlConnector.MySqlCommand();
-            comboBox1 = new ComboBox();
+            Genero = new ComboBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -48,24 +48,27 @@
             label11 = new Label();
             label12 = new Label();
             label13 = new Label();
-            label14 = new Label();
             label15 = new Label();
             label16 = new Label();
             label17 = new Label();
             label18 = new Label();
             label19 = new Label();
             label20 = new Label();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
+            EstadoCivil = new ComboBox();
+            Profissao = new TextBox();
+            Bairro = new TextBox();
+            Complemento = new TextBox();
+            Numero = new TextBox();
+            Cidade = new TextBox();
+            Endereco = new TextBox();
+            Celular = new TextBox();
+            Email = new TextBox();
+            Telefone = new TextBox();
+            Nacionalidade = new TextBox();
+            WhatsApp = new ComboBox();
+            CEP = new TextBox();
+            UF = new ComboBox();
+            Finalizar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -78,29 +81,32 @@
             label1.TabIndex = 6;
             label1.Text = "Cadastrar Cliente";
             // 
-            // Condicao
+            // RG
             // 
-            Condicao.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Condicao.Location = new Point(30, 204);
-            Condicao.Name = "Condicao";
-            Condicao.Size = new Size(115, 23);
-            Condicao.TabIndex = 36;
+            RG.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            RG.Location = new Point(30, 204);
+            RG.Name = "RG";
+            RG.Size = new Size(115, 23);
+            RG.TabIndex = 36;
+            RG.KeyPress += RG_KeyPress;
             // 
-            // textBox3
+            // DataNascimento
             // 
-            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox3.Location = new Point(30, 329);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(133, 23);
-            textBox3.TabIndex = 35;
+            DataNascimento.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            DataNascimento.Location = new Point(30, 329);
+            DataNascimento.Name = "DataNascimento";
+            DataNascimento.Size = new Size(133, 23);
+            DataNascimento.TabIndex = 35;
+            DataNascimento.KeyPress += DataNascimento_KeyPress;
             // 
-            // Marca
+            // CPF
             // 
-            Marca.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Marca.Location = new Point(30, 136);
-            Marca.Name = "Marca";
-            Marca.Size = new Size(115, 23);
-            Marca.TabIndex = 34;
+            CPF.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            CPF.Location = new Point(30, 136);
+            CPF.Name = "CPF";
+            CPF.Size = new Size(115, 23);
+            CPF.TabIndex = 34;
+            CPF.KeyPress += CPF_KeyPress;
             // 
             // label9
             // 
@@ -146,13 +152,13 @@
             label5.Text = "RG:";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Nome_Produto
+            // NomeCliente
             // 
-            Nome_Produto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Nome_Produto.Location = new Point(30, 75);
-            Nome_Produto.Name = "Nome_Produto";
-            Nome_Produto.Size = new Size(131, 23);
-            Nome_Produto.TabIndex = 29;
+            NomeCliente.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NomeCliente.Location = new Point(30, 75);
+            NomeCliente.Name = "NomeCliente";
+            NomeCliente.Size = new Size(131, 23);
+            NomeCliente.TabIndex = 29;
             // 
             // mySqlCommand1
             // 
@@ -161,14 +167,14 @@
             mySqlCommand1.Transaction = null;
             mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
-            // comboBox1
+            // Genero
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Masculino", "Feminino", "Outro" });
-            comboBox1.Location = new Point(30, 268);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(160, 23);
-            comboBox1.TabIndex = 37;
+            Genero.FormattingEnabled = true;
+            Genero.Items.AddRange(new object[] { "", "Masculino", "Feminino", "Outro" });
+            Genero.Location = new Point(30, 268);
+            Genero.Name = "Genero";
+            Genero.Size = new Size(160, 23);
+            Genero.TabIndex = 37;
             // 
             // label2
             // 
@@ -207,44 +213,44 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(646, 233);
+            label6.Location = new Point(294, 367);
             label6.Name = "label6";
-            label6.Size = new Size(97, 32);
+            label6.Size = new Size(118, 32);
             label6.TabIndex = 40;
-            label6.Text = "Gênero:";
+            label6.Text = "Endereço:";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(654, 241);
+            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(428, 242);
             label7.Name = "label7";
-            label7.Size = new Size(97, 32);
+            label7.Size = new Size(71, 17);
             label7.TabIndex = 41;
-            label7.Text = "Gênero:";
+            label7.Text = "WhatsApp:";
             label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(662, 249);
+            label10.Location = new Point(294, 297);
             label10.Name = "label10";
-            label10.Size = new Size(97, 32);
+            label10.Size = new Size(86, 32);
             label10.TabIndex = 42;
-            label10.Text = "Gênero:";
+            label10.Text = "E-mail:";
             label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(670, 257);
+            label11.Location = new Point(294, 230);
             label11.Name = "label11";
-            label11.Size = new Size(97, 32);
+            label11.Size = new Size(93, 32);
             label11.TabIndex = 43;
-            label11.Text = "Gênero:";
+            label11.Text = "Celular:";
             label11.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -253,86 +259,75 @@
             label12.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label12.Location = new Point(294, 162);
             label12.Name = "label12";
-            label12.Size = new Size(97, 32);
+            label12.Size = new Size(111, 32);
             label12.TabIndex = 44;
-            label12.Text = "Gênero:";
+            label12.Text = "Telefone:";
             label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(552, 297);
+            label13.Location = new Point(513, 367);
             label13.Name = "label13";
-            label13.Size = new Size(97, 32);
+            label13.Size = new Size(59, 32);
             label13.TabIndex = 45;
-            label13.Text = "Gênero:";
+            label13.Text = "CEP:";
             label13.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(560, 305);
-            label14.Name = "label14";
-            label14.Size = new Size(97, 32);
-            label14.TabIndex = 46;
-            label14.Text = "Gênero:";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(568, 313);
+            label15.Location = new Point(513, 233);
             label15.Name = "label15";
-            label15.Size = new Size(97, 32);
+            label15.Size = new Size(93, 32);
             label15.TabIndex = 47;
-            label15.Text = "Gênero:";
+            label15.Text = "Cidade:";
             label15.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(576, 321);
+            label16.Location = new Point(513, 297);
             label16.Name = "label16";
-            label16.Size = new Size(97, 32);
+            label16.Size = new Size(47, 32);
             label16.TabIndex = 48;
-            label16.Text = "Gênero:";
+            label16.Text = "UF:";
             label16.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label17
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(584, 329);
+            label17.Location = new Point(513, 162);
             label17.Name = "label17";
-            label17.Size = new Size(97, 32);
+            label17.Size = new Size(81, 32);
             label17.TabIndex = 49;
-            label17.Text = "Gênero:";
+            label17.Text = "Bairro:";
             label17.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(592, 337);
+            label18.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.Location = new Point(513, 101);
             label18.Name = "label18";
-            label18.Size = new Size(97, 32);
+            label18.Size = new Size(149, 30);
             label18.TabIndex = 50;
-            label18.Text = "Gênero:";
+            label18.Text = "Complemento:";
             label18.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label19
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(600, 345);
+            label19.Location = new Point(513, 40);
             label19.Name = "label19";
-            label19.Size = new Size(97, 32);
+            label19.Size = new Size(107, 32);
             label19.TabIndex = 51;
-            label19.Text = "Gênero:";
+            label19.Text = "Número:";
             label19.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label20
@@ -346,118 +341,162 @@
             label20.Text = "Nacionalidade:";
             label20.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // comboBox2
+            // EstadoCivil
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Solteiro", "Casado", "Divorciado", "Viúvo" });
-            comboBox2.Location = new Point(30, 390);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(160, 23);
-            comboBox2.TabIndex = 53;
+            EstadoCivil.FormattingEnabled = true;
+            EstadoCivil.Items.AddRange(new object[] { "", "Solteiro", "Casado", "Divorciado", "Viúvo" });
+            EstadoCivil.Location = new Point(30, 390);
+            EstadoCivil.Name = "EstadoCivil";
+            EstadoCivil.Size = new Size(160, 23);
+            EstadoCivil.TabIndex = 53;
             // 
-            // textBox1
+            // Profissao
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(294, 75);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(131, 23);
-            textBox1.TabIndex = 54;
+            Profissao.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Profissao.Location = new Point(294, 75);
+            Profissao.Name = "Profissao";
+            Profissao.Size = new Size(131, 23);
+            Profissao.TabIndex = 54;
             // 
-            // textBox2
+            // Bairro
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(548, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(131, 23);
-            textBox2.TabIndex = 55;
+            Bairro.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Bairro.Location = new Point(513, 197);
+            Bairro.Name = "Bairro";
+            Bairro.Size = new Size(131, 23);
+            Bairro.TabIndex = 55;
             // 
-            // textBox4
+            // Complemento
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(556, 45);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(131, 23);
-            textBox4.TabIndex = 56;
+            Complemento.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Complemento.Location = new Point(513, 136);
+            Complemento.Name = "Complemento";
+            Complemento.Size = new Size(131, 23);
+            Complemento.TabIndex = 56;
             // 
-            // textBox5
+            // Numero
             // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox5.Location = new Point(564, 53);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(131, 23);
-            textBox5.TabIndex = 57;
+            Numero.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Numero.Location = new Point(513, 75);
+            Numero.Name = "Numero";
+            Numero.Size = new Size(131, 23);
+            Numero.TabIndex = 57;
+            Numero.KeyPress += Numero_KeyPress;
             // 
-            // textBox6
+            // Cidade
             // 
-            textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox6.Location = new Point(572, 61);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(131, 23);
-            textBox6.TabIndex = 58;
+            Cidade.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Cidade.Location = new Point(513, 268);
+            Cidade.Name = "Cidade";
+            Cidade.Size = new Size(131, 23);
+            Cidade.TabIndex = 58;
             // 
-            // textBox7
+            // Endereco
             // 
-            textBox7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox7.Location = new Point(580, 69);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(131, 23);
-            textBox7.TabIndex = 59;
+            Endereco.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Endereco.Location = new Point(294, 402);
+            Endereco.Name = "Endereco";
+            Endereco.Size = new Size(131, 23);
+            Endereco.TabIndex = 59;
             // 
-            // textBox8
+            // Celular
             // 
-            textBox8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox8.Location = new Point(588, 77);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(131, 23);
-            textBox8.TabIndex = 60;
+            Celular.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Celular.Location = new Point(294, 268);
+            Celular.Name = "Celular";
+            Celular.Size = new Size(131, 23);
+            Celular.TabIndex = 60;
+            Celular.KeyPress += Celular_KeyPress;
             // 
-            // textBox9
+            // Email
             // 
-            textBox9.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox9.Location = new Point(596, 85);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(131, 23);
-            textBox9.TabIndex = 61;
+            Email.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Email.Location = new Point(294, 332);
+            Email.Name = "Email";
+            Email.Size = new Size(131, 23);
+            Email.TabIndex = 61;
             // 
-            // textBox10
+            // Telefone
             // 
-            textBox10.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox10.Location = new Point(604, 93);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(131, 23);
-            textBox10.TabIndex = 62;
+            Telefone.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Telefone.Location = new Point(294, 197);
+            Telefone.Name = "Telefone";
+            Telefone.Size = new Size(131, 23);
+            Telefone.TabIndex = 62;
+            Telefone.KeyPress += Telefone_KeyPress;
             // 
-            // textBox11
+            // Nacionalidade
             // 
-            textBox11.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox11.Location = new Point(294, 136);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(131, 23);
-            textBox11.TabIndex = 63;
+            Nacionalidade.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Nacionalidade.Location = new Point(294, 136);
+            Nacionalidade.Name = "Nacionalidade";
+            Nacionalidade.Size = new Size(131, 23);
+            Nacionalidade.TabIndex = 63;
+            // 
+            // WhatsApp
+            // 
+            WhatsApp.FormattingEnabled = true;
+            WhatsApp.Items.AddRange(new object[] { "", "Sim", "Não" });
+            WhatsApp.Location = new Point(431, 268);
+            WhatsApp.Name = "WhatsApp";
+            WhatsApp.Size = new Size(68, 23);
+            WhatsApp.TabIndex = 64;
+            // 
+            // CEP
+            // 
+            CEP.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            CEP.Location = new Point(513, 402);
+            CEP.Name = "CEP";
+            CEP.Size = new Size(131, 23);
+            CEP.TabIndex = 66;
+            CEP.KeyPress += CEP_KeyPress;
+            // 
+            // UF
+            // 
+            UF.FormattingEnabled = true;
+            UF.Items.AddRange(new object[] { "", "RO", "AC", "AM", "RR", "PA", "AP", "TO", "MA", "PI", "CE", "RN", "PB", "PE", "AL", "SE", "BA", "MG", "ES", "RJ", "SP", "PR", "SC", "RS", "MS", "MT", "GO", "DF" });
+            UF.Location = new Point(513, 332);
+            UF.Name = "UF";
+            UF.Size = new Size(81, 23);
+            UF.TabIndex = 67;
+            // 
+            // Finalizar
+            // 
+            Finalizar.Anchor = AnchorStyles.None;
+            Finalizar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Finalizar.Location = new Point(670, 329);
+            Finalizar.Name = "Finalizar";
+            Finalizar.Size = new Size(118, 52);
+            Finalizar.TabIndex = 68;
+            Finalizar.Text = "Finalizar Cadastro";
+            Finalizar.UseVisualStyleBackColor = true;
             // 
             // Cadastrar_Cliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox2);
+            Controls.Add(Finalizar);
+            Controls.Add(UF);
+            Controls.Add(CEP);
+            Controls.Add(WhatsApp);
+            Controls.Add(Nacionalidade);
+            Controls.Add(Telefone);
+            Controls.Add(Email);
+            Controls.Add(Celular);
+            Controls.Add(Endereco);
+            Controls.Add(Cidade);
+            Controls.Add(Numero);
+            Controls.Add(Complemento);
+            Controls.Add(Bairro);
+            Controls.Add(Profissao);
+            Controls.Add(EstadoCivil);
             Controls.Add(label20);
             Controls.Add(label19);
             Controls.Add(label18);
             Controls.Add(label17);
             Controls.Add(label16);
             Controls.Add(label15);
-            Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(label11);
@@ -467,18 +506,18 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
-            Controls.Add(Condicao);
-            Controls.Add(textBox3);
-            Controls.Add(Marca);
+            Controls.Add(Genero);
+            Controls.Add(RG);
+            Controls.Add(DataNascimento);
+            Controls.Add(CPF);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(preco);
             Controls.Add(label5);
-            Controls.Add(Nome_Produto);
+            Controls.Add(NomeCliente);
             Controls.Add(label1);
             Name = "Cadastrar_Cliente";
-            Text = "Cadastrar_Cliente";
+            Text = "Cadastro";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -486,16 +525,16 @@
         #endregion
 
         private Label label1;
-        private TextBox Condicao;
-        private TextBox textBox3;
-        private TextBox Marca;
+        private TextBox RG;
+        private TextBox DataNascimento;
+        private TextBox CPF;
         private Label label9;
         private Label label8;
         private Label preco;
         private Label label5;
-        private TextBox Nome_Produto;
+        private TextBox NomeCliente;
         private MySqlConnector.MySqlCommand mySqlCommand1;
-        private ComboBox comboBox1;
+        private ComboBox Genero;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -505,23 +544,26 @@
         private Label label11;
         private Label label12;
         private Label label13;
-        private Label label14;
         private Label label15;
         private Label label16;
         private Label label17;
         private Label label18;
         private Label label19;
         private Label label20;
-        private ComboBox comboBox2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
+        private ComboBox EstadoCivil;
+        private TextBox Profissao;
+        private TextBox Bairro;
+        private TextBox Complemento;
+        private TextBox Numero;
+        private TextBox Cidade;
+        private TextBox Endereco;
+        private TextBox Celular;
+        private TextBox Email;
+        private TextBox Telefone;
+        private TextBox Nacionalidade;
+        private ComboBox WhatsApp;
+        private TextBox CEP;
+        private ComboBox UF;
+        private Button Finalizar;
     }
 }

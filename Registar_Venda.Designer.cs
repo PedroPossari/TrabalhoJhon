@@ -192,8 +192,7 @@
             Controls.Add(txtCliente);
             Controls.Add(BoxNProduto);
             Name = "Registar_Venda";
-            Text = " ";
-            FormClosing += Registar_Venda_FormClosing;
+            Text = " Vendas";
             ResumeLayout(false);
             PerformLayout();
         }

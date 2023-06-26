@@ -26,6 +26,6 @@ public partial class EFDbContext : DbContext
     public virtual DbSet<Venda> Vendas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-=> optionsBuilder.UseMySql("server=localhost;database=trabalholipa;uid=root;", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.6.11-mariadb"));
+=> optionsBuilder.UseMySql("server=localhost;database=Trabalholoja;uid=root;password=P@ssari1", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.11.4-mariadb"));
 
 }

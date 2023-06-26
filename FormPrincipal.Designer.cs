@@ -43,6 +43,7 @@
             label7 = new Label();
             label6 = new Label();
             label8 = new Label();
+            USer = new Label();
             SuspendLayout();
             // 
             // label1
@@ -51,9 +52,9 @@
             label1.Location = new Point(322, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(220, 74);
+            label1.Size = new Size(175, 45);
             label1.TabIndex = 5;
-            label1.Text = "      BEM VIND@!\r\nO que deseja fazer?";
+            label1.Text = "Bem Vindo\r\nO que deseja fazer?";
             // 
             // reg_venda
             // 
@@ -83,6 +84,7 @@
             Esto.Size = new Size(170, 97);
             Esto.TabIndex = 7;
             Esto.Text = "Estoque";
+            Esto.Click += Esto_Click;
             // 
             // AddProduto
             // 
@@ -111,6 +113,7 @@
             H_venda.Size = new Size(170, 97);
             H_venda.TabIndex = 9;
             H_venda.Text = "Histórico de Vendas";
+            H_venda.Click += H_venda_Click;
             // 
             // CadCliente
             // 
@@ -138,6 +141,7 @@
             CadUser.Size = new Size(170, 97);
             CadUser.TabIndex = 10;
             CadUser.Text = "Cadastrar Usuário";
+            CadUser.Click += CadUser_Click;
             // 
             // label2
             // 
@@ -157,6 +161,7 @@
             label3.Name = "label3";
             label3.Size = new Size(95, 54);
             label3.TabIndex = 13;
+            label3.Click += CadCliente_Click;
             // 
             // label4
             // 
@@ -176,6 +181,7 @@
             label5.Name = "label5";
             label5.Size = new Size(95, 54);
             label5.TabIndex = 15;
+            label5.Click += Esto_Click;
             // 
             // label7
             // 
@@ -185,6 +191,7 @@
             label7.Name = "label7";
             label7.Size = new Size(95, 54);
             label7.TabIndex = 17;
+            label7.Click += CadUser_Click;
             // 
             // label6
             // 
@@ -199,19 +206,29 @@
             // 
             label8.AutoSize = true;
             label8.Image = Properties.Resources.Ícone_Carrinho_de_Compras_PNG;
-            label8.Location = new Point(12, 13);
+            label8.Location = new Point(185, 148);
             label8.Name = "label8";
             label8.Size = new Size(38, 15);
             label8.TabIndex = 19;
             label8.Text = "label8";
             label8.Visible = false;
             // 
+            // USer
+            // 
+            USer.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            USer.Location = new Point(416, 9);
+            USer.Margin = new Padding(4, 0, 4, 0);
+            USer.Name = "USer";
+            USer.Size = new Size(383, 22);
+            USer.TabIndex = 20;
+            USer.Text = "AAA";
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(846, 415);
-            Controls.Add(label8);
+            Controls.Add(USer);
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(label5);
@@ -225,9 +242,9 @@
             Controls.Add(label1);
             Controls.Add(label4);
             Controls.Add(AddProduto);
+            Controls.Add(label8);
             Margin = new Padding(4, 3, 4, 3);
             Name = "FormPrincipal";
-            Text = "Main";
             FormClosing += Main_FormClosing;
             ResumeLayout(false);
             PerformLayout();
@@ -248,5 +265,6 @@
         private Label label7;
         private Label label6;
         private Label label8;
+        private Label USer;
     }
 }

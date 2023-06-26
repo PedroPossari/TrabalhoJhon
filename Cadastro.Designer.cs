@@ -100,11 +100,11 @@
             LblLogin.Anchor = AnchorStyles.Top;
             LblLogin.AutoSize = true;
             LblLogin.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            LblLogin.Location = new Point(268, 9);
+            LblLogin.Location = new Point(140, 9);
             LblLogin.Name = "LblLogin";
-            LblLogin.Size = new Size(286, 65);
+            LblLogin.Size = new Size(499, 65);
             LblLogin.TabIndex = 16;
-            LblLogin.Text = "Fazer Login";
+            LblLogin.Text = "Adicione um Usuário";
             LblLogin.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -157,7 +157,7 @@
             Controls.Add(Nome_Completo);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Cadastro";
-            Text = "\\";
+            Text = "Cadastro";
             ResumeLayout(false);
             PerformLayout();
         }

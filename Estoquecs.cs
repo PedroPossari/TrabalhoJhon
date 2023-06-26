@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace TrabalhoLipa
 {
-    public partial class Registar_Venda : Form
+    public partial class Estoquecs : Form
     {
-        FormPrincipal principal = new FormPrincipal();
-        public Registar_Venda()
+        public Estoquecs()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

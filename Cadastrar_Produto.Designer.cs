@@ -262,7 +262,7 @@
             Controls.Add(LblUsuario);
             Controls.Add(Nome_Produto);
             Name = "Cadastrar_Produto";
-            Text = "Cadastrar_Produto";
+            Text = "Cadastro";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -16,5 +16,40 @@ namespace TrabalhoLipa
         {
             InitializeComponent();
         }
+
+        private void CPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.Altura(e);
+        }
+
+        private void RG_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.Altura(e);
+        }
+
+        private void DataNascimento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.Altura(e);
+        }
+
+        private void Telefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.Altura(e);
+        }
+
+        private void Celular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.Altura(e);
+        }
+
+        private void Numero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.Altura(e);
+        }
+
+        private void CEP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.Altura(e);
+        }
     }
 }

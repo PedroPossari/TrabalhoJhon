@@ -151,3 +151,5 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Cadastrar_Produto.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Properties.Resources.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Cadastrar_Cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Estoquecs.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Historico_de_Vendas.resources

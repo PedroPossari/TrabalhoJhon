@@ -124,7 +124,6 @@
             Controls.Add(LblSenha);
             Controls.Add(LblUsuario);
             Name = "FormLogin";
-            Text = "FormLogin";
             ResumeLayout(false);
             PerformLayout();
         }
