@@ -23,6 +23,7 @@ namespace TrabalhoLipa
         {
             string user = cliente.Text;
             string produto = nome_produto.Text;
+            string descont = Desconto.Text;
             Usuario? client = CRUD.BuscarUsuarioPorUser(user);
             Produto? Prod = CRUD.BuscarProdutoPorNome(produto);
             if (client != null)
@@ -33,7 +34,9 @@ namespace TrabalhoLipa
                     {
                         if (Prod.Nome == produto)
                         {
-                           // double venda = Prod.PrecoVenda -
+                            int descontinho = int.Parse(descont);
+                            double venda = Prod.PrecoVenda - descontinho;
+
                         }
                     }
                 }
@@ -50,6 +53,29 @@ namespace TrabalhoLipa
         private void Desconto_KeyPress(object sender, KeyPressEventArgs e)
         {
             Program.IntNumber(e);
+        }
+
+        private void Adicionar_Prod_Click(object sender, EventArgs e)
+        {
+            string user = cliente.Text;
+            string produto = nome_produto.Text;
+            string descont = Desconto.Text;
+            Usuario? client = CRUD.BuscarUsuarioPorUser(user);
+            Produto? Prod = CRUD.BuscarProdutoPorNome(produto);
+            if (client != null)
+            {
+                if (client.User == user)
+                {
+                    if (Prod != null)
+                    {
+                        this.dataGridView1.Rows.Add(client.User, Prod.Nome, descont);
+
+
+
+                    }
+                }
+            }
+
         }
     }
 }
