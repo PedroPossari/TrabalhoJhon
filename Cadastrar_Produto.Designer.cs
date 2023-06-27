@@ -52,18 +52,19 @@
             // Nome_Produto
             // 
             Nome_Produto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Nome_Produto.Location = new Point(54, 64);
+            Nome_Produto.Location = new Point(62, 85);
+            Nome_Produto.Margin = new Padding(3, 4, 3, 4);
             Nome_Produto.Name = "Nome_Produto";
-            Nome_Produto.Size = new Size(367, 23);
+            Nome_Produto.Size = new Size(419, 27);
             Nome_Produto.TabIndex = 15;
             // 
             // LblUsuario
             // 
             LblUsuario.AutoSize = true;
             LblUsuario.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            LblUsuario.Location = new Point(148, 341);
+            LblUsuario.Location = new Point(169, 455);
             LblUsuario.Name = "LblUsuario";
-            LblUsuario.Size = new Size(98, 32);
+            LblUsuario.Size = new Size(124, 41);
             LblUsuario.TabIndex = 18;
             LblUsuario.Text = "Largura:";
             LblUsuario.TextAlign = ContentAlignment.MiddleCenter;
@@ -72,9 +73,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(52, 341);
+            label1.Location = new Point(59, 455);
             label1.Name = "label1";
-            label1.Size = new Size(82, 32);
+            label1.Size = new Size(103, 41);
             label1.TabIndex = 19;
             label1.Text = "Altura:";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -83,9 +84,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(54, 182);
+            label5.Location = new Point(62, 243);
             label5.Name = "label5";
-            label5.Size = new Size(119, 32);
+            label5.Size = new Size(151, 41);
             label5.TabIndex = 20;
             label5.Text = "Condição:";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -94,9 +95,9 @@
             // 
             preco.AutoSize = true;
             preco.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            preco.Location = new Point(54, 266);
+            preco.Location = new Point(62, 355);
             preco.Name = "preco";
-            preco.Size = new Size(78, 32);
+            preco.Size = new Size(100, 41);
             preco.TabIndex = 21;
             preco.Text = "Preço:";
             preco.TextAlign = ContentAlignment.MiddleCenter;
@@ -105,9 +106,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(486, 18);
+            label7.Location = new Point(555, 24);
             label7.Name = "label7";
-            label7.Size = new Size(121, 32);
+            label7.Size = new Size(153, 41);
             label7.TabIndex = 22;
             label7.Text = "Descrição:";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -116,9 +117,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(54, 102);
+            label8.Location = new Point(62, 136);
             label8.Name = "label8";
-            label8.Size = new Size(84, 32);
+            label8.Size = new Size(106, 41);
             label8.TabIndex = 23;
             label8.Text = "Marca:";
             label8.TextAlign = ContentAlignment.MiddleCenter;
@@ -127,9 +128,9 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(54, 18);
+            label9.Location = new Point(62, 24);
             label9.Name = "label9";
-            label9.Size = new Size(212, 32);
+            label9.Size = new Size(267, 41);
             label9.TabIndex = 24;
             label9.Text = "Nome do Produto:";
             label9.TextAlign = ContentAlignment.MiddleCenter;
@@ -137,52 +138,58 @@
             // Marca
             // 
             Marca.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Marca.Location = new Point(54, 147);
+            Marca.Location = new Point(62, 196);
+            Marca.Margin = new Padding(3, 4, 3, 4);
             Marca.Name = "Marca";
-            Marca.Size = new Size(367, 23);
+            Marca.Size = new Size(419, 27);
             Marca.TabIndex = 25;
             // 
             // DEscricao
             // 
             DEscricao.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            DEscricao.Location = new Point(486, 64);
+            DEscricao.Location = new Point(555, 85);
+            DEscricao.Margin = new Padding(3, 4, 3, 4);
             DEscricao.Multiline = true;
             DEscricao.Name = "DEscricao";
-            DEscricao.Size = new Size(302, 133);
+            DEscricao.Size = new Size(345, 176);
             DEscricao.TabIndex = 26;
             // 
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox3.Location = new Point(54, 301);
+            textBox3.Location = new Point(62, 401);
+            textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(133, 23);
+            textBox3.Size = new Size(151, 27);
             textBox3.TabIndex = 27;
             textBox3.KeyPress += textBox3_KeyPress;
             // 
             // Condicao
             // 
             Condicao.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Condicao.Location = new Point(54, 228);
+            Condicao.Location = new Point(62, 304);
+            Condicao.Margin = new Padding(3, 4, 3, 4);
             Condicao.Name = "Condicao";
-            Condicao.Size = new Size(367, 23);
+            Condicao.Size = new Size(419, 27);
             Condicao.TabIndex = 28;
             // 
             // Altura
             // 
             Altura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Altura.Location = new Point(52, 385);
+            Altura.Location = new Point(59, 513);
+            Altura.Margin = new Padding(3, 4, 3, 4);
             Altura.Name = "Altura";
-            Altura.Size = new Size(66, 23);
+            Altura.Size = new Size(75, 27);
             Altura.TabIndex = 29;
             Altura.KeyPress += Altura_KeyPress;
             // 
             // Largura
             // 
             Largura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Largura.Location = new Point(163, 385);
+            Largura.Location = new Point(186, 513);
+            Largura.Margin = new Padding(3, 4, 3, 4);
             Largura.Name = "Largura";
-            Largura.Size = new Size(66, 23);
+            Largura.Size = new Size(75, 27);
             Largura.TabIndex = 30;
             Largura.KeyPress += Largura_KeyPress;
             // 
@@ -190,9 +197,10 @@
             // 
             BtnFinalizar.Anchor = AnchorStyles.None;
             BtnFinalizar.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            BtnFinalizar.Location = new Point(541, 294);
+            BtnFinalizar.Location = new Point(663, 447);
+            BtnFinalizar.Margin = new Padding(3, 4, 3, 4);
             BtnFinalizar.Name = "BtnFinalizar";
-            BtnFinalizar.Size = new Size(209, 70);
+            BtnFinalizar.Size = new Size(239, 93);
             BtnFinalizar.TabIndex = 31;
             BtnFinalizar.Text = "Cadastrar Produto";
             BtnFinalizar.UseVisualStyleBackColor = true;
@@ -201,9 +209,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(342, 341);
+            label2.Location = new Point(391, 455);
             label2.Name = "label2";
-            label2.Size = new Size(163, 32);
+            label2.Size = new Size(205, 41);
             label2.TabIndex = 32;
             label2.Text = "Profundidade:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -211,9 +219,10 @@
             // Profundiade
             // 
             Profundiade.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Profundiade.Location = new Point(385, 385);
+            Profundiade.Location = new Point(440, 513);
+            Profundiade.Margin = new Padding(3, 4, 3, 4);
             Profundiade.Name = "Profundiade";
-            Profundiade.Size = new Size(66, 23);
+            Profundiade.Size = new Size(75, 27);
             Profundiade.TabIndex = 33;
             Profundiade.KeyPress += Profundiade_KeyPress;
             // 
@@ -221,9 +230,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(260, 341);
+            label3.Location = new Point(297, 455);
             label3.Name = "label3";
-            label3.Size = new Size(68, 32);
+            label3.Size = new Size(88, 41);
             label3.TabIndex = 34;
             label3.Text = "Peso:";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -231,17 +240,18 @@
             // Peso
             // 
             Peso.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Peso.Location = new Point(274, 385);
+            Peso.Location = new Point(313, 513);
+            Peso.Margin = new Padding(3, 4, 3, 4);
             Peso.Name = "Peso";
-            Peso.Size = new Size(66, 23);
+            Peso.Size = new Size(75, 27);
             Peso.TabIndex = 35;
             Peso.KeyPress += Peso_KeyPress;
             // 
             // Cadastrar_Produto
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 442);
+            ClientSize = new Size(914, 589);
             Controls.Add(Peso);
             Controls.Add(label3);
             Controls.Add(Profundiade);
@@ -261,6 +271,7 @@
             Controls.Add(label1);
             Controls.Add(LblUsuario);
             Controls.Add(Nome_Produto);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Cadastrar_Produto";
             Text = "Cadastrar_Produto";
             ResumeLayout(false);
