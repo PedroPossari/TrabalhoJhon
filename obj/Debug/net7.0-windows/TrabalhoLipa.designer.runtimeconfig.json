@@ -12,7 +12,7 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Windows10\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\victo\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Windows10\\.nuget\\packages"
     ],
     "configProperties": {
