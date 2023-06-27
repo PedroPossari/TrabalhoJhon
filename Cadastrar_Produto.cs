@@ -19,27 +19,27 @@ namespace TrabalhoLipa
 
         private void Altura_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Program.Altura(e);
+            Program.IntNumber(e);
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Program.Altura(e);
+            Program.IntNumber(e);
         }
 
         private void Largura_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Program.Altura(e);
+            Program.IntNumber(e);
         }
 
         private void Peso_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Program.Altura(e);
+            Program.IntNumber(e);
         }
 
         private void Profundiade_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Program.Altura(e);
+            Program.IntNumber(e);
         }
     }
 }
