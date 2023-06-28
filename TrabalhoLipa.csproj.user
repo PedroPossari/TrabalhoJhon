@@ -22,9 +22,6 @@
     <Compile Update="Historico_de_Vendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Nova pasta\FormPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Registar_Venda.cs">
       <SubType>Form</SubType>
     </Compile>

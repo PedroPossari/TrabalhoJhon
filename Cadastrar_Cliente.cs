@@ -59,8 +59,17 @@ namespace TrabalhoLipa
             Cliente cli = new Cliente();
             cli.NomeCompleto = NomeCliente.Text;
             cli.Profissao = Profissao.Text;
-            int numeros = int.Parse(Numeros.Text);
-            cli.Numero = numeros;
+            if (Numeros.Text == "")
+            {
+                int numeros = 404;
+                cli.Numero = numeros;
+            }
+            else
+            {
+                int numeros = int.Parse(Numeros.Text);
+                cli.Numero = numeros;
+            }
+
             cli.Cpf = CPF.Text;
             cli.Nacionalidade = Nacionalidade.Text;
             cli.Complemento = Complemento.Text;
@@ -77,9 +86,25 @@ namespace TrabalhoLipa
             cli.Cidade = Cidade.Text;
             cli.DataNascimento = data_de_nascimento.Value;
             cli.Email = Email.Text;
-            cli.Uf =
+            cli.Uf = UF.Text;
+            cli.EstadoCivil = EstadoCivil.Text;
+            cli.Endereco = Endereco.Text;
             cli.Cep = CEP.Text;
 
+            if (NomeCliente.Text != "" && Profissao.Text != "" && Numeros.Text != "" && CPF.Text != ""
+                && Nacionalidade.Text != "" && Complemento.Text != "" && RG.Text != "" &&
+                Telefone.Text != "" && Bairro.Text != "" && Telefone.Text != "" && Bairro.Text
+                 != "" && Genero.Text != "" && Celular.Text != "" && Cidade.Text != "" &&
+                 Email.Text != "" && UF.Text != "" && EstadoCivil.Text != "" && Endereco.Text
+                  != "" && CEP.Text != "")
+            {
+                MessageBox.Show("Cliente cadastrado com Sucesso!");
+                CRUD.InserirCliente(cli);
+            }
+            else
+            {
+                MessageBox.Show("Complete os campos corretamente!");
+            }
         }
     }
 }

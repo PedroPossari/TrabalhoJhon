@@ -21,7 +21,7 @@ namespace TrabalhoLipa
         private void Btn_Cadastro_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();
-            if (Nome_Completo.Text != null && Senha.Text != null && Confirma_Senha.Text != null)
+            if (Nome_Completo.Text != "" && Senha.Text != "" && Confirma_Senha.Text != "" && User.Text != "")
             {
                 if (Confirma_Senha.Text == Senha.Text)
                 {

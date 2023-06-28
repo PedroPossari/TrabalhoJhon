@@ -110,3 +110,8 @@ C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\Trabal
 C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\ref\TrabalhoLipa.dll
 C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Cadastro.resources
 C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Registar_Venda.resources
+C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Cadastrar_Cliente.resources
+C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Cadastrar_Produto.resources
+C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Estoquecs.resources
+C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Historico_de_Vendas.resources
+C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Properties.Resources.resources

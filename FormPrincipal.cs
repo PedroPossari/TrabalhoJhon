@@ -17,6 +17,11 @@ namespace TrabalhoLipa
         {
             InitializeComponent();
         }
+        public FormPrincipal(string user)
+        {
+            InitializeComponent();
+            USer.Text = user;
+        }
         private void label2_Click(object sender, EventArgs e)
         {
             Registar_Venda venda = new Registar_Venda();
