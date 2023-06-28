@@ -43,13 +43,6 @@ namespace TrabalhoLipa
             }
 
         }
-
-        private void Registar_Venda_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            FormPrincipal principal = new FormPrincipal();
-            principal.Show();
-        }
-
         private void Desconto_KeyPress(object sender, KeyPressEventArgs e)
         {
             Program.IntNumber(e);

@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace TrabalhoLipa
 {
-    public partial class Estoquecs : Form
+    public partial class Controle_Cliente : Form
     {
-        public Estoquecs()
+        public Controle_Cliente()
         {
             InitializeComponent();
         }
 
         private void Adicionar_Click(object sender, EventArgs e)
         {
-            Cadastrar_Produto produto = new Cadastrar_Produto();
-            produto.Show();
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
         }
     }
 }

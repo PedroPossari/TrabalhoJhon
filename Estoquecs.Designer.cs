@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
             Pesquisar = new TextBox();
             Filtro = new ComboBox();
             label9 = new Label();
@@ -37,16 +36,10 @@
             Situacao = new ComboBox();
             BtnPesquisar = new Button();
             Limpar = new Button();
+            Adicionar = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(229, 13);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(548, 409);
-            listBox1.TabIndex = 0;
             // 
             // Pesquisar
             // 
@@ -111,7 +104,7 @@
             // 
             BtnPesquisar.Anchor = AnchorStyles.None;
             BtnPesquisar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnPesquisar.Location = new Point(39, 283);
+            BtnPesquisar.Location = new Point(39, 273);
             BtnPesquisar.Name = "BtnPesquisar";
             BtnPesquisar.Size = new Size(121, 44);
             BtnPesquisar.TabIndex = 29;
@@ -122,18 +115,40 @@
             // 
             Limpar.Anchor = AnchorStyles.None;
             Limpar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Limpar.Location = new Point(39, 343);
+            Limpar.Location = new Point(39, 323);
             Limpar.Name = "Limpar";
             Limpar.Size = new Size(121, 44);
             Limpar.TabIndex = 30;
             Limpar.Text = "Limpar";
             Limpar.UseVisualStyleBackColor = true;
             // 
+            // Adicionar
+            // 
+            Adicionar.Anchor = AnchorStyles.None;
+            Adicionar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Adicionar.Location = new Point(39, 373);
+            Adicionar.Name = "Adicionar";
+            Adicionar.Size = new Size(121, 44);
+            Adicionar.TabIndex = 31;
+            Adicionar.Text = "Adicionar";
+            Adicionar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(266, 31);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(480, 357);
+            dataGridView1.TabIndex = 32;
+            // 
             // Estoquecs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
+            Controls.Add(Adicionar);
             Controls.Add(Limpar);
             Controls.Add(BtnPesquisar);
             Controls.Add(Situacao);
@@ -142,16 +157,14 @@
             Controls.Add(label9);
             Controls.Add(Filtro);
             Controls.Add(Pesquisar);
-            Controls.Add(listBox1);
             Name = "Estoquecs";
             Text = "Estoque";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private ListBox listBox1;
         private TextBox Pesquisar;
         private ComboBox Filtro;
         private Label label9;
@@ -160,5 +173,7 @@
         private ComboBox Situacao;
         private Button BtnPesquisar;
         private Button Limpar;
+        private Button Adicionar;
+        private DataGridView dataGridView1;
     }
 }
