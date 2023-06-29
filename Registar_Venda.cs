@@ -77,6 +77,7 @@ namespace TrabalhoLipa
         private void BtnFinalizar_Click(object sender, EventArgs e)
         {
             double desconto = double.Parse(Desconto.Text);
+            int descontin = int.Parse(Desconto.Text);
             vend.Desconto = desconto;
             if (cliente.Text == "" || Observacao.Text == "" || Situacao.Text == "" ||
                 Forma_de_pagamento.Text == "")
