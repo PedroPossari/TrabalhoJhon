@@ -21,26 +21,19 @@ namespace TrabalhoLipa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string user = cliente.Text;
+            int pesquisar = int.Parse(cliente.Text);
             string produto = nome_produto.Text;
             string descont = Desconto.Text;
-            Usuario? client = CRUD.BuscarUsuarioPorUser(user);
+            Cliente client = CRUD.BuscarClientePorId(pesquisar);
             Produto? Prod = CRUD.BuscarProdutoPorNome(produto);
-            if (client != null)
+            Venda venda1 = new Venda();
+            ItemVenda itemVenda = new ItemVenda();
+            Produto produto1 = new Produto();
+            if(nome_produto.Text != "")
             {
-                if (client.User == user)
-                {
-                    if (Prod != null)
-                    {
-                        if (Prod.Nome == produto)
-                        {
-                            int descontinho = int.Parse(descont);
-                            double venda = Prod.PrecoVenda - descontinho;
-
-                        }
-                    }
-                }
+               
             }
+           
 
         }
         private void Desconto_KeyPress(object sender, KeyPressEventArgs e)

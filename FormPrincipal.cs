@@ -52,8 +52,8 @@ namespace TrabalhoLipa
 
         private void CadUser_Click(object sender, EventArgs e)
         {
-            Cadastro cad = new Cadastro();
-            cad.Show();
+            Controle_Cliente client = new Controle_Cliente();
+            client.Show();
         }
 
         private void Esto_Click(object sender, EventArgs e)

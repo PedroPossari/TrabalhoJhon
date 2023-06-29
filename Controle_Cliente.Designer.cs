@@ -28,154 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             Adicionar = new Button();
-            Limpar = new Button();
             BtnPesquisar = new Button();
-            Situacao = new ComboBox();
-            label2 = new Label();
-            label1 = new Label();
             label9 = new Label();
-            Filtro = new ComboBox();
             Pesquisar = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            lista_Cliente = new DataGridView();
+            Excluir = new Button();
+            ((System.ComponentModel.ISupportInitialize)lista_Cliente).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(288, 32);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(480, 357);
-            dataGridView1.TabIndex = 42;
             // 
             // Adicionar
             // 
             Adicionar.Anchor = AnchorStyles.None;
             Adicionar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Adicionar.Location = new Point(61, 374);
+            Adicionar.Location = new Point(38, 371);
+            Adicionar.Margin = new Padding(3, 4, 3, 4);
             Adicionar.Name = "Adicionar";
-            Adicionar.Size = new Size(121, 44);
+            Adicionar.Size = new Size(138, 59);
             Adicionar.TabIndex = 41;
             Adicionar.Text = "Adicionar";
             Adicionar.UseVisualStyleBackColor = true;
             Adicionar.Click += Adicionar_Click;
             // 
-            // Limpar
-            // 
-            Limpar.Anchor = AnchorStyles.None;
-            Limpar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Limpar.Location = new Point(61, 324);
-            Limpar.Name = "Limpar";
-            Limpar.Size = new Size(121, 44);
-            Limpar.TabIndex = 40;
-            Limpar.Text = "Limpar";
-            Limpar.UseVisualStyleBackColor = true;
-            // 
             // BtnPesquisar
             // 
             BtnPesquisar.Anchor = AnchorStyles.None;
             BtnPesquisar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnPesquisar.Location = new Point(61, 274);
+            BtnPesquisar.Location = new Point(39, 304);
+            BtnPesquisar.Margin = new Padding(3, 4, 3, 4);
             BtnPesquisar.Name = "BtnPesquisar";
-            BtnPesquisar.Size = new Size(121, 44);
+            BtnPesquisar.Size = new Size(138, 59);
             BtnPesquisar.TabIndex = 39;
             BtnPesquisar.Text = "Pesquisar";
             BtnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // Situacao
-            // 
-            Situacao.FormattingEnabled = true;
-            Situacao.Items.AddRange(new object[] { "Ativo", "Inativo" });
-            Situacao.Location = new Point(33, 198);
-            Situacao.Name = "Situacao";
-            Situacao.Size = new Size(121, 23);
-            Situacao.TabIndex = 38;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(33, 98);
-            label2.Name = "label2";
-            label2.Size = new Size(59, 25);
-            label2.TabIndex = 37;
-            label2.Text = "Filtro:";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(34, 164);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 25);
-            label1.TabIndex = 36;
-            label1.Text = "Situação:";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            BtnPesquisar.Click += BtnPesquisar_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(33, 32);
+            label9.Location = new Point(38, 43);
             label9.Name = "label9";
-            label9.Size = new Size(96, 25);
+            label9.Size = new Size(188, 32);
             label9.TabIndex = 35;
-            label9.Text = "Pesquisar:";
+            label9.Text = "Pesquisar por id:";
             label9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // Filtro
-            // 
-            Filtro.FormattingEnabled = true;
-            Filtro.Items.AddRange(new object[] { "Nenhum", "ID", "Nome", "CPF", "RG", "Email", "Telefone" });
-            Filtro.Location = new Point(34, 132);
-            Filtro.Name = "Filtro";
-            Filtro.Size = new Size(121, 23);
-            Filtro.TabIndex = 34;
             // 
             // Pesquisar
             // 
-            Pesquisar.Location = new Point(34, 66);
-            Pesquisar.Margin = new Padding(3, 2, 3, 2);
+            Pesquisar.Location = new Point(39, 88);
             Pesquisar.Name = "Pesquisar";
-            Pesquisar.Size = new Size(160, 23);
+            Pesquisar.Size = new Size(182, 27);
             Pesquisar.TabIndex = 33;
+            // 
+            // lista_Cliente
+            // 
+            lista_Cliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            lista_Cliente.Location = new Point(253, 43);
+            lista_Cliente.Name = "lista_Cliente";
+            lista_Cliente.RowHeadersWidth = 51;
+            lista_Cliente.RowTemplate.Height = 29;
+            lista_Cliente.Size = new Size(649, 448);
+            lista_Cliente.TabIndex = 42;
+            // 
+            // Excluir
+            // 
+            Excluir.Anchor = AnchorStyles.None;
+            Excluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Excluir.Location = new Point(38, 438);
+            Excluir.Margin = new Padding(3, 4, 3, 4);
+            Excluir.Name = "Excluir";
+            Excluir.Size = new Size(138, 59);
+            Excluir.TabIndex = 43;
+            Excluir.Text = "Excluir";
+            Excluir.UseVisualStyleBackColor = true;
+            Excluir.Click += Excluir_Click;
             // 
             // Controle_Cliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(914, 600);
+            Controls.Add(Excluir);
+            Controls.Add(lista_Cliente);
             Controls.Add(Adicionar);
-            Controls.Add(Limpar);
             Controls.Add(BtnPesquisar);
-            Controls.Add(Situacao);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(label9);
-            Controls.Add(Filtro);
             Controls.Add(Pesquisar);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Controle_Cliente";
             Text = "Controle_Cliente";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lista_Cliente).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Button Adicionar;
-        private Button Limpar;
         private Button BtnPesquisar;
-        private ComboBox Situacao;
-        private Label label2;
-        private Label label1;
         private Label label9;
-        private ComboBox Filtro;
         private TextBox Pesquisar;
+        private DataGridView lista_Cliente;
+        private Button Excluir;
     }
 }
