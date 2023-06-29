@@ -41,10 +41,10 @@
             // 
             BtnEntrar.Anchor = AnchorStyles.None;
             BtnEntrar.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            BtnEntrar.Location = new Point(358, 437);
+            BtnEntrar.Location = new Point(248, 384);
             BtnEntrar.Margin = new Padding(3, 4, 3, 4);
             BtnEntrar.Name = "BtnEntrar";
-            BtnEntrar.Size = new Size(199, 79);
+            BtnEntrar.Size = new Size(193, 79);
             BtnEntrar.TabIndex = 14;
             BtnEntrar.Text = "Entrar";
             BtnEntrar.UseVisualStyleBackColor = true;
@@ -95,23 +95,23 @@
             LblLogin.Anchor = AnchorStyles.Top;
             LblLogin.AutoSize = true;
             LblLogin.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            LblLogin.Location = new Point(294, 12);
+            LblLogin.Location = new Point(258, 32);
             LblLogin.Name = "LblLogin";
-            LblLogin.Size = new Size(356, 81);
+            LblLogin.Size = new Size(400, 81);
             LblLogin.TabIndex = 15;
-            LblLogin.Text = "Fazer Login";
+            LblLogin.Text = "Ralizar Login";
             LblLogin.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Cadastro
             // 
             Cadastro.Anchor = AnchorStyles.None;
             Cadastro.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Cadastro.Location = new Point(635, 437);
+            Cadastro.Location = new Point(474, 384);
             Cadastro.Margin = new Padding(3, 4, 3, 4);
             Cadastro.Name = "Cadastro";
-            Cadastro.Size = new Size(199, 79);
+            Cadastro.Size = new Size(193, 79);
             Cadastro.TabIndex = 16;
-            Cadastro.Text = "Cadastro";
+            Cadastro.Text = "Cadastrar";
             Cadastro.UseVisualStyleBackColor = true;
             Cadastro.Click += Cadastro_Click;
             // 

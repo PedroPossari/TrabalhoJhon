@@ -16,7 +16,7 @@ namespace TrabalhoLipa.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.7")
+                .HasAnnotation("ProductVersion", "7.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("TrabalhoLipa.Models.Cliente", b =>
@@ -119,7 +119,7 @@ namespace TrabalhoLipa.Migrations
                     b.Property<double>("ValorUnitario")
                         .HasColumnType("double");
 
-                    b.Property<int?>("VendaId")
+                    b.Property<int>("VendaId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -218,7 +218,7 @@ namespace TrabalhoLipa.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("ClienteId")
+                    b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DataCadastro")
@@ -247,7 +247,7 @@ namespace TrabalhoLipa.Migrations
                     b.Property<int>("TotalItens")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UsuarioId")
+                    b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
                     b.Property<double>("ValorTotal")
@@ -270,36 +270,34 @@ namespace TrabalhoLipa.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TrabalhoLipa.Models.Venda", null)
+                    b.HasOne("TrabalhoLipa.Models.Venda", "Venda")
                         .WithMany("Itemvenda")
-                        .HasForeignKey("VendaId");
+                        .HasForeignKey("VendaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Produto");
+
+                    b.Navigation("Venda");
                 });
 
             modelBuilder.Entity("TrabalhoLipa.Models.Venda", b =>
                 {
                     b.HasOne("TrabalhoLipa.Models.Cliente", "Cliente")
-                        .WithMany("Vendas")
-                        .HasForeignKey("ClienteId");
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("TrabalhoLipa.Models.Usuario", "Usuario")
-                        .WithMany("Venda")
-                        .HasForeignKey("UsuarioId");
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cliente");
 
                     b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("TrabalhoLipa.Models.Cliente", b =>
-                {
-                    b.Navigation("Vendas");
-                });
-
-            modelBuilder.Entity("TrabalhoLipa.Models.Usuario", b =>
-                {
-                    b.Navigation("Venda");
                 });
 
             modelBuilder.Entity("TrabalhoLipa.Models.Venda", b =>

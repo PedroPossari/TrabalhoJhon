@@ -38,6 +38,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            Voltar = new Button();
             SuspendLayout();
             // 
             // Nome_Completo
@@ -135,11 +136,23 @@
             label3.Text = "Confirmar Senha:";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // Voltar
+            // 
+            Voltar.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Voltar.Location = new Point(736, 611);
+            Voltar.Name = "Voltar";
+            Voltar.Size = new Size(125, 57);
+            Voltar.TabIndex = 20;
+            Voltar.Text = "Voltar";
+            Voltar.UseVisualStyleBackColor = true;
+            Voltar.Click += Voltar_Click;
+            // 
             // Cadastro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(873, 680);
+            Controls.Add(Voltar);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -168,5 +181,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Button Voltar;
     }
 }

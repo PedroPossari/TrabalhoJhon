@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TrabalhoLipa.Migrations
 {
     /// <inheritdoc />
-    public partial class trabalhoJho : Migration
+    public partial class JhoJho : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -139,8 +139,8 @@ namespace TrabalhoLipa.Migrations
                     Observacoes = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     DataCadastro = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ClienteId = table.Column<int>(type: "int", nullable: true),
-                    UsuarioId = table.Column<int>(type: "int", nullable: true)
+                    ClienteId = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -149,12 +149,14 @@ namespace TrabalhoLipa.Migrations
                         name: "FK_Vendas_Clientes_ClienteId",
                         column: x => x.ClienteId,
                         principalTable: "Clientes",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Vendas_Usuarios_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "Usuarios",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -164,13 +166,13 @@ namespace TrabalhoLipa.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    VendaId = table.Column<int>(type: "int", nullable: false),
                     ProdutoId = table.Column<int>(type: "int", nullable: false),
                     Quantidade = table.Column<int>(type: "int", nullable: false),
                     Descricao = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ValorUnitario = table.Column<double>(type: "double", nullable: false),
-                    Subtotal = table.Column<double>(type: "double", nullable: false),
-                    VendaId = table.Column<int>(type: "int", nullable: true)
+                    Subtotal = table.Column<double>(type: "double", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -185,7 +187,8 @@ namespace TrabalhoLipa.Migrations
                         name: "FK_ItensVendas_Vendas_VendaId",
                         column: x => x.VendaId,
                         principalTable: "Vendas",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 

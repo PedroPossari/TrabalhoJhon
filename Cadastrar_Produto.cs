@@ -86,7 +86,7 @@ namespace TrabalhoLipa
                 pro.Condicao = Condicao.Text;
                 pro.QuantidadeEstoque = pro.QuantidadeEstoque + quantidade;
                 CRUD.InserirProduto(pro);
-                MessageBox.Show("Foi");
+                MessageBox.Show("Produto Cadastrado Com Sucesso!");
             }   
             }
         }

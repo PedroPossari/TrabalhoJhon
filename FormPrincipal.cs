@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,10 +22,12 @@ namespace TrabalhoLipa
         {
             InitializeComponent();
             USer.Text = user;
+           
         }
         private void label2_Click(object sender, EventArgs e)
         {
-            Registar_Venda venda = new Registar_Venda();
+            string userr = USer.Text;
+            Registar_Venda venda = new Registar_Venda(userr);
             this.Hide();
             venda.ShowDialog();
             this.Show();

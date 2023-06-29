@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrabalhoLipa.Models;
 
@@ -25,9 +26,16 @@ public partial class Venda
 
     public DateTime DataCadastro { get; set; } = DateTime.Now;
 
-    public Cliente? Cliente { get; set; } 
+    [ForeignKey("ClienteId")]
+    public Cliente Cliente { get; set; } = null!;
 
-    public Usuario? Usuario { get; set; } 
+    public int ClienteId { get; set; }
 
+    [ForeignKey("UsuarioId")]
+    public Usuario Usuario { get; set; } = null!;
+
+    public int UsuarioId { get; set; }
+
+    [InverseProperty("Venda")]
     public virtual ICollection<ItemVenda> Itemvenda { get; set; } = new List<ItemVenda>();
 }

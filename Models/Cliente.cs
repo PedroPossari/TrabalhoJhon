@@ -51,8 +51,6 @@ public partial class Cliente
 
     public DateTime DataCadastro { get; set; } = DateTime.Now;
 
-    public virtual ICollection<Venda> Vendas { get; set; } = new List<Venda>();
-
    
 
     

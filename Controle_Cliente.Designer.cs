@@ -34,6 +34,7 @@
             Pesquisar = new TextBox();
             lista_Cliente = new DataGridView();
             Excluir = new Button();
+            Editar = new Button();
             ((System.ComponentModel.ISupportInitialize)lista_Cliente).BeginInit();
             SuspendLayout();
             // 
@@ -95,7 +96,7 @@
             // 
             Excluir.Anchor = AnchorStyles.None;
             Excluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Excluir.Location = new Point(38, 438);
+            Excluir.Location = new Point(38, 491);
             Excluir.Margin = new Padding(3, 4, 3, 4);
             Excluir.Name = "Excluir";
             Excluir.Size = new Size(138, 59);
@@ -104,11 +105,25 @@
             Excluir.UseVisualStyleBackColor = true;
             Excluir.Click += Excluir_Click;
             // 
+            // Editar
+            // 
+            Editar.Anchor = AnchorStyles.None;
+            Editar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Editar.Location = new Point(38, 432);
+            Editar.Margin = new Padding(3, 4, 3, 4);
+            Editar.Name = "Editar";
+            Editar.Size = new Size(138, 59);
+            Editar.TabIndex = 44;
+            Editar.Text = "Editar";
+            Editar.UseVisualStyleBackColor = true;
+            Editar.Click += Editar_Click;
+            // 
             // Controle_Cliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(Editar);
             Controls.Add(Excluir);
             Controls.Add(lista_Cliente);
             Controls.Add(Adicionar);
@@ -130,5 +145,6 @@
         private TextBox Pesquisar;
         private DataGridView lista_Cliente;
         private Button Excluir;
+        private Button Editar;
     }
 }

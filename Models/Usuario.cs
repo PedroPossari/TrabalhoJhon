@@ -15,6 +15,5 @@ public partial class Usuario
 
     public string Situacao { get; set; } = "Ativo";
 
-    public virtual ICollection<Venda> Venda { get; set; } = new List<Venda>();
 }
 

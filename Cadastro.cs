@@ -49,5 +49,12 @@ namespace TrabalhoLipa
             }
 
         }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            FormLogin Login = new FormLogin();
+            Login.Show();
+            this.Hide();
+        }
     }
 }

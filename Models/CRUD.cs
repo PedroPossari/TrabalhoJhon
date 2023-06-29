@@ -82,6 +82,11 @@ namespace TrabalhoLipa.Models
             return bd.Clientes.FirstOrDefault(c => c.Rg == rg);
         }
 
+        public static Cliente? BuscarClientePorNome(string Nome)
+        {
+            return bd.Clientes.FirstOrDefault(c => c.NomeCompleto == Nome);
+        }
+
         #endregion
 
         #region Excluir
