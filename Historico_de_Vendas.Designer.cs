@@ -28,70 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Limpar = new Button();
             BtnPesquisar = new Button();
-            Situacao = new ComboBox();
-            label2 = new Label();
-            label1 = new Label();
             label9 = new Label();
-            Filtro = new ComboBox();
             Pesquisar = new TextBox();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            Lista_Venda = new DataGridView();
+            Adicionar = new Button();
+            Editar = new Button();
+            Excluir = new Button();
+            ((System.ComponentModel.ISupportInitialize)Lista_Venda).BeginInit();
             SuspendLayout();
-            // 
-            // Limpar
-            // 
-            Limpar.Anchor = AnchorStyles.None;
-            Limpar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Limpar.Location = new Point(45, 341);
-            Limpar.Name = "Limpar";
-            Limpar.Size = new Size(121, 44);
-            Limpar.TabIndex = 39;
-            Limpar.Text = "Limpar";
-            Limpar.UseVisualStyleBackColor = true;
             // 
             // BtnPesquisar
             // 
             BtnPesquisar.Anchor = AnchorStyles.None;
             BtnPesquisar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnPesquisar.Location = new Point(45, 291);
+            BtnPesquisar.Location = new Point(35, 136);
             BtnPesquisar.Name = "BtnPesquisar";
             BtnPesquisar.Size = new Size(121, 44);
             BtnPesquisar.TabIndex = 38;
             BtnPesquisar.Text = "Pesquisar";
             BtnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // Situacao
-            // 
-            Situacao.FormattingEnabled = true;
-            Situacao.Items.AddRange(new object[] { "Todas", "Em Aberto", "Pago", "Finalizada/Entregue" });
-            Situacao.Location = new Point(17, 205);
-            Situacao.Name = "Situacao";
-            Situacao.Size = new Size(121, 23);
-            Situacao.TabIndex = 37;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(17, 105);
-            label2.Name = "label2";
-            label2.Size = new Size(59, 25);
-            label2.TabIndex = 36;
-            label2.Text = "Filtro:";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(18, 171);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 25);
-            label1.TabIndex = 35;
-            label1.Text = "Situação:";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            BtnPesquisar.Click += BtnPesquisar_Click;
             // 
             // label9
             // 
@@ -99,19 +56,10 @@
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label9.Location = new Point(17, 39);
             label9.Name = "label9";
-            label9.Size = new Size(96, 25);
+            label9.Size = new Size(151, 25);
             label9.TabIndex = 34;
-            label9.Text = "Pesquisar:";
+            label9.Text = "Pesquisar por Id:";
             label9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // Filtro
-            // 
-            Filtro.FormattingEnabled = true;
-            Filtro.Items.AddRange(new object[] { "Nenhum", "Número da Venda", "Código do Cliente", "Código do Funcionário", "Forma de Pagamento", "Valor Total" });
-            Filtro.Location = new Point(18, 139);
-            Filtro.Name = "Filtro";
-            Filtro.Size = new Size(121, 23);
-            Filtro.TabIndex = 33;
             // 
             // Pesquisar
             // 
@@ -121,46 +69,76 @@
             Pesquisar.Size = new Size(160, 23);
             Pesquisar.TabIndex = 32;
             // 
-            // dataGridView1
+            // Lista_Venda
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(257, 39);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(480, 357);
-            dataGridView1.TabIndex = 40;
+            Lista_Venda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Lista_Venda.Location = new Point(262, 39);
+            Lista_Venda.Name = "Lista_Venda";
+            Lista_Venda.RowTemplate.Height = 25;
+            Lista_Venda.Size = new Size(480, 357);
+            Lista_Venda.TabIndex = 40;
+            // 
+            // Adicionar
+            // 
+            Adicionar.Anchor = AnchorStyles.None;
+            Adicionar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Adicionar.Location = new Point(35, 186);
+            Adicionar.Name = "Adicionar";
+            Adicionar.Size = new Size(121, 44);
+            Adicionar.TabIndex = 41;
+            Adicionar.Text = "Adicionar";
+            Adicionar.UseVisualStyleBackColor = true;
+            Adicionar.Click += Adicionar_Click;
+            // 
+            // Editar
+            // 
+            Editar.Anchor = AnchorStyles.None;
+            Editar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Editar.Location = new Point(35, 236);
+            Editar.Name = "Editar";
+            Editar.Size = new Size(121, 44);
+            Editar.TabIndex = 42;
+            Editar.Text = "Editar";
+            Editar.UseVisualStyleBackColor = true;
+            // 
+            // Excluir
+            // 
+            Excluir.Anchor = AnchorStyles.None;
+            Excluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Excluir.Location = new Point(35, 286);
+            Excluir.Name = "Excluir";
+            Excluir.Size = new Size(121, 44);
+            Excluir.TabIndex = 43;
+            Excluir.Text = "Excluir";
+            Excluir.UseVisualStyleBackColor = true;
+            Excluir.Click += Excluir_Click;
             // 
             // Historico_de_Vendas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
-            Controls.Add(Limpar);
+            Controls.Add(Excluir);
+            Controls.Add(Editar);
+            Controls.Add(Adicionar);
+            Controls.Add(Lista_Venda);
             Controls.Add(BtnPesquisar);
-            Controls.Add(Situacao);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(label9);
-            Controls.Add(Filtro);
             Controls.Add(Pesquisar);
             Name = "Historico_de_Vendas";
             Text = "Historico de Vendas";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Lista_Venda).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button Limpar;
         private Button BtnPesquisar;
-        private ComboBox Situacao;
-        private Label label2;
-        private Label label1;
         private Label label9;
-        private ComboBox Filtro;
         private TextBox Pesquisar;
-        private DataGridView dataGridView1;
+        private DataGridView Lista_Venda;
+        private Button Adicionar;
+        private Button Editar;
+        private Button Excluir;
     }
 }

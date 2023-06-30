@@ -13,9 +13,12 @@ namespace TrabalhoLipa
 {
     public partial class Controle_Cliente : Form
     {
-        public Controle_Cliente()
+        public Usuario usuario;
+        public Controle_Cliente(string user)
         {
             InitializeComponent();
+            usuario = new Usuario();
+            usuario.User = user;
         }
 
         private void Adicionar_Click(object sender, EventArgs e)
@@ -79,11 +82,21 @@ namespace TrabalhoLipa
 
         private void Excluir_Click(object sender, EventArgs e)
         {
-            int pesquisar = int.Parse(Pesquisar.Text);
-            Cliente clien = CRUD.BuscarClientePorId(pesquisar);
-            if (clien != null)
+            string novoUsuario = usuario.User;
+            usuario = CRUD.BuscarUsuarioPorUser(novoUsuario);
+            if(usuario.Administrador == "Sim")
             {
-                CRUD.ExcluirCliente(clien);
+                int pesquisar = int.Parse(Pesquisar.Text);
+                Cliente clien = CRUD.BuscarClientePorId(pesquisar);
+                if (clien != null)
+                {
+                    MessageBox.Show("Cliente excluído com sucesso!");
+                    CRUD.ExcluirCliente(clien);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ação negada");
             }
         }
 

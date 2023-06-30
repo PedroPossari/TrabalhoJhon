@@ -11,8 +11,8 @@ using TrabalhoLipa.Models;
 namespace TrabalhoLipa.Migrations
 {
     [DbContext(typeof(EFDbContext))]
-    [Migration("20230629171833_JhoJho")]
-    partial class JhoJho
+    [Migration("20230630003609_trabalhoJho")]
+    partial class trabalhoJho
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -193,6 +193,10 @@ namespace TrabalhoLipa.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("Administrador")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("NomeCompleto")
                         .IsRequired()

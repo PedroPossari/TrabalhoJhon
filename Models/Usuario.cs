@@ -15,5 +15,7 @@ public partial class Usuario
 
     public string Situacao { get; set; } = "Ativo";
 
+    public string Administrador { get; set; } = "Não";
+
 }
 

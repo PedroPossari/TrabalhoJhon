@@ -13,9 +13,12 @@ namespace TrabalhoLipa
 {
     public partial class Estoquecs : Form
     {
-        public Estoquecs()
+        public Usuario usuario;
+        public Estoquecs(string user)
         {
             InitializeComponent();
+            usuario = new Usuario();
+            usuario.User = user;
         }
 
         private void Adicionar_Click(object sender, EventArgs e)
@@ -58,20 +61,29 @@ namespace TrabalhoLipa
 
         private void Excluir_Click(object sender, EventArgs e)
         {
-            string pesquisar = Pesquisar.Text;
-            Produto prod = CRUD.BuscarProdutoPorNome(pesquisar);
-            DialogResult dialogResult = MessageBox.Show("Sim","Não", MessageBoxButtons.YesNo);
-            if (prod != null)
+            string novoUsuario = usuario.User;
+            usuario = CRUD.BuscarUsuarioPorUser(novoUsuario);
+            if (usuario.Administrador == "Sim")
             {
-                if (dialogResult == DialogResult.Yes) 
-                { 
-                    MessageBox.Show("Cliente excluido!");
-                    CRUD.ExcluirProduto(prod);
-                }
-                else if (dialogResult == DialogResult.No)
+                string pesquisar = Pesquisar.Text;
+                Produto prod = CRUD.BuscarProdutoPorNome(pesquisar);
+                DialogResult dialogResult = MessageBox.Show("Sim", "Não", MessageBoxButtons.YesNo);
+                if (prod != null)
                 {
-                    MessageBox.Show("Ação cancelada");
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Produto excluido!");
+                        CRUD.ExcluirProduto(prod);
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Ação cancelada");
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Ação negada");
             }
         }
     }

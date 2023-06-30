@@ -76,8 +76,22 @@ namespace TrabalhoLipa
             Produto? duto = CRUD.BuscarProdutoPorNome(nome);
             if (duto != null)
             {
-                MessageBox.Show("Produto Existente");
-            }
+                    DialogResult dialogResult = MessageBox.Show("Produto existente, deseja adicionar itens?", "Erro", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        pro.Nome = nome;
+                        pro.Marca = pro.Marca;
+                        pro.Descricao = pro.Descricao;
+                        pro.Condicao = pro.Condicao;
+                        pro.QuantidadeEstoque = pro.QuantidadeEstoque + quantidade;
+                        MessageBox.Show("Produto excluido!");
+                        CRUD.AlterarProduto(pro);
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Ação cancelada");
+                    }
+                }
             else
             {
                 pro.Nome = Nome_Produto.Text;

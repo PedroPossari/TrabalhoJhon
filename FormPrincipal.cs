@@ -55,13 +55,15 @@ namespace TrabalhoLipa
 
         private void CadUser_Click(object sender, EventArgs e)
         {
-            Controle_Cliente client = new Controle_Cliente();
+            string user = USer.Text;
+            Controle_Cliente client = new Controle_Cliente(user);
             client.Show();
         }
 
         private void Esto_Click(object sender, EventArgs e)
         {
-            Estoquecs estoque = new Estoquecs();
+            string user = USer.Text;
+            Estoquecs estoque = new Estoquecs(user);
             this.Hide();
             estoque.ShowDialog();
             this.Show();
@@ -69,7 +71,8 @@ namespace TrabalhoLipa
 
         private void H_venda_Click(object sender, EventArgs e)
         {
-            Historico_de_Vendas venda = new Historico_de_Vendas();
+            string userr = USer.Text;
+            Historico_de_Vendas venda = new Historico_de_Vendas(userr);
             this.Hide();
             venda.ShowDialog();
             this.Show();

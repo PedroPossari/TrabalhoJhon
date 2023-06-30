@@ -191,6 +191,10 @@ namespace TrabalhoLipa.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("Administrador")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("NomeCompleto")
                         .IsRequired()
                         .HasColumnType("longtext");

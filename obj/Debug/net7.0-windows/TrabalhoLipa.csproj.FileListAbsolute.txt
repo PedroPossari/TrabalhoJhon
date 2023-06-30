@@ -160,3 +160,4 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.genruntimeconfig.cache
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\ref\TrabalhoLipa.dll
 C:\Users\Windows10\Documents\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Controle_Cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabalhoJhon\obj\Debug\net7.0-windows\TrabalhoLipa.Controle_Cliente.resources

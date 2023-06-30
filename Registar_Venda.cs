@@ -19,17 +19,17 @@ namespace TrabalhoLipa
         public ItemVenda item;
         public Registar_Venda(string user)
         {
-            
+
             InitializeComponent();
             vend = new Venda();
             prod = new Produto();
             item = new ItemVenda();
             vend.Usuario = CRUD.BuscarUsuarioPorUser(user);
         }
-            private void Desconto_KeyPress(object sender, KeyPressEventArgs e)
+        private void Desconto_KeyPress(object sender, KeyPressEventArgs e)
         {
             Program.IntNumber(e);
-            
+
         }
 
 
@@ -40,7 +40,7 @@ namespace TrabalhoLipa
             //vend.Desconto = desconto;
 
         }
-        
+
 
 
 
@@ -50,17 +50,17 @@ namespace TrabalhoLipa
         private void Adicionar_Prod_Click(object sender, EventArgs e)
         {
             string produto = nome_produto.Text;
-            
+
 
             prod = CRUD.BuscarProdutoPorNome(produto);
 
-          
+
 
             int quantidade = int.Parse(Qauntidade.Text);
 
             if (quantidade <= prod.QuantidadeEstoque)
             {
-               
+
                 item.Quantidade = quantidade;
                 item.Produto = prod;
                 vend.Itemvenda.Add(item);
@@ -69,8 +69,8 @@ namespace TrabalhoLipa
             {
                 MessageBox.Show("A quantidade ultrapassou o estoque!");
             }
-            
-            
+
+
 
         }
 
@@ -96,6 +96,7 @@ namespace TrabalhoLipa
                 vend.Observacoes = obs;
                 vend.Situacao = situ;
                 vend.Desconto = desconto;
+                vend.TotalItens = quant;
                 vend.Subtotal = prod.PrecoVenda;
                 prod.QuantidadeEstoque = prod.QuantidadeEstoque - quant;
                 vend.Cliente = CRUD.BuscarClientePorNome(nome);
