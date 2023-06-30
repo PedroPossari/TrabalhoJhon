@@ -86,6 +86,12 @@ namespace TrabalhoLipa
                 MessageBox.Show("Ação negada");
             }
         }
+
+        private void Adicionar_Click_1(object sender, EventArgs e)
+        {
+            Cadastrar_Produto produto = new Cadastrar_Produto();
+            produto.Show();
+        }
     }
 }
 

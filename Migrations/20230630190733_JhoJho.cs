@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TrabalhoLipa.Migrations
 {
     /// <inheritdoc />
-    public partial class trabalhoJho : Migration
+    public partial class JhoJho : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

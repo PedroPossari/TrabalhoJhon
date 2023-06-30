@@ -64,7 +64,7 @@ namespace TrabalhoLipa
 
         private void Adicionar_Click(object sender, EventArgs e)
         {
-            string usia = usi.NomeCompleto.ToString();
+            string usia = usi.User.ToString();
             Registar_Venda venda = new Registar_Venda(usia);
             venda.Show();
         }

@@ -11,8 +11,8 @@ using TrabalhoLipa.Models;
 namespace TrabalhoLipa.Migrations
 {
     [DbContext(typeof(EFDbContext))]
-    [Migration("20230630003609_trabalhoJho")]
-    partial class trabalhoJho
+    [Migration("20230630190733_JhoJho")]
+    partial class JhoJho
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

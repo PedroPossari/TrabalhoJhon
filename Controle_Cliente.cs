@@ -23,7 +23,7 @@ namespace TrabalhoLipa
 
         private void Adicionar_Click(object sender, EventArgs e)
         {
-            Cadastro cadastro = new Cadastro();
+            Cadastrar_Cliente cadastro = new Cadastrar_Cliente();
             cadastro.Show();
         }
 

@@ -79,6 +79,13 @@ namespace TrabalhoLipa
             double desconto = double.Parse(Desconto.Text);
             int descontin = int.Parse(Desconto.Text);
             vend.Desconto = desconto;
+
+
+            Cliente clidi = CRUD.BuscarClientePorNome(cliente.Text);
+            if(clidi.Situacao != "inativo"){ 
+
+
+
             if (cliente.Text == "" || Observacao.Text == "" || Situacao.Text == "" ||
                 Forma_de_pagamento.Text == "")
             {
@@ -105,6 +112,12 @@ namespace TrabalhoLipa
                 CRUD.InserirVenda(vend);
                 MessageBox.Show("Venda inserida");
             }
+            }
+            else
+            {
+                MessageBox.Show("O cliente está desativado, consulte o gerente!");
+            }
+
         }
     }
 }

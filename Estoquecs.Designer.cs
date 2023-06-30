@@ -92,6 +92,7 @@
             Adicionar.TabIndex = 31;
             Adicionar.Text = "Adicionar";
             Adicionar.UseVisualStyleBackColor = true;
+            Adicionar.Click += Adicionar_Click_1;
             // 
             // Lista_Produtos
             // 
